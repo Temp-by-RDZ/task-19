@@ -111,10 +111,10 @@ public class My_Tree<Type extends Comparable <? super Type>> implements Tree<Typ
 		}
 
 	public boolean isBalanced(My_Node<Type> node, int pref) {
-		return (node == null) ||
-			isBalanced(node.branch_left,pref) &&
-			isBalanced(node.branch_right,pref) &&
-			(Math.abs(height(node.branch_left) - height(node.branch_right)) <= pref);
+		return (node == null) ||					//Мы в конце или...
+			isBalanced(node.branch_left,pref) &&	//отправляемся проверять древо в левой ветви
+			isBalanced(node.branch_right,pref) &&	//отправляемся проверять древо в правой ветви
+			(Math.abs(height(node.branch_left) - height(node.branch_right)) <= pref);	//разница глубин не выше погрешности
 		}
 	private int height(My_Node<Type>  node) {
 		return node == null ? 0 : 1 + Math.max(height(node.branch_left), height(node.branch_right));

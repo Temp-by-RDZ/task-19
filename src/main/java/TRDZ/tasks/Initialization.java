@@ -3,7 +3,7 @@ package TRDZ.tasks;
 import java.util.ArrayList;
 
 public class Initialization {
-	static int deep = 3; //Глубина генерированных деревьев
+	static int deep = 4; //Глубина генерированных деревьев
 
 	public static void main(String[] args) {
 		ArrayList<My_Tree<Integer>> trees = new ArrayList<>();
